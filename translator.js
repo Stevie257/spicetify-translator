@@ -100,14 +100,20 @@ async function translateSongContextless() {
           return true;
         case Spicetify.URI.Type.EPISODE:
           return true;
-        case Spicetify.URI.Type.PLAYLIST:
+        case Spicetify.URI.Type.PLAYLIST: 
           return false;
         case Spicetify.URI.Type.PLAYLIST_V2:
           return true;
       }
 	}
 
-const statsIcon = `<svg fill="currentColor" class="main-contextMenu-menuItemIcon" stroke="None" height="18px" width="18px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" stroke-width="0.75" xmlns:xlink="http://www.w3.org/1999/xlink" 
+const widgetIcon = `<svg fill="currentColor" class="main-contextMenu-menuItemIcon" stroke="None" height="18px" width="18px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" stroke-width="0.75" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 96 960 960" xml:space="preserve">
+   <path fill="currentColor" d="m475 976 181-480h82l186 480h-87l-41-126H604l-47 126h-82Zm151-196h142l-70-194h-2l-70 194Zm-466 76-55-55 204-204q-38-44-67.5-88.5T190 416h87q17 33 37.5 62.5T361 539q45-47 75-97.5T487
+   336H40v-80h280v-80h80v80h280v80H567q-22 69-58.5 135.5T419 598l98 99-30 81-127-122-200 200Z" />
+   </svg>`
+
+const contextIcon = `<svg fill="currentColor" class="main-contextMenu-menuItemIcon" stroke="None" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" stroke-width="0.75" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 96 960 960" xml:space="preserve">
    <path fill="currentColor" d="m475 976 181-480h82l186 480h-87l-41-126H604l-47 126h-82Zm151-196h142l-70-194h-2l-70 194Zm-466 76-55-55 204-204q-38-44-67.5-88.5T190 416h87q17 33 37.5 62.5T361 539q45-47 75-97.5T487
    336H40v-80h280v-80h80v80h280v80H567q-22 69-58.5 135.5T419 598l98 99-30 81-127-122-200 200Z" />
@@ -133,14 +139,14 @@ const statsIcon = `<svg fill="currentColor" class="main-contextMenu-menuItemIcon
 		"Translate",
 		translateSongTitle, 
 		shouldDisplayContextMenu,
-		statsIcon
+		contextIcon
 	);
 	context.register();
 
   
   const widget = new Spicetify.Playbar.Widget(
     "Translate",
-    statsIcon,
+    widgetIcon,
     translateSongContextless,
     false,
     false 
