@@ -1,0 +1,8 @@
+{
+  "name": "Translator",
+  "description": "Adds a button to translate stuff in Spotify (tracks, albums, playlists, artists, etc.)",
+  "preview": "icon.png",
+  "main": "translator.js",
+  "readme": "README.md",
+  "tags": ["interface", "QoL"]
+}
