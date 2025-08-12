@@ -65,6 +65,9 @@ async function getMediaName(uri) {
       case Spicetify.URI.Type.EPISODE:
         name = await fetchEpisode(uri);
         break;
+      case Spicetify.URI.Type.PLAYLIST:
+        name = await fetchPlaylist(uri);
+        break;
       case Spicetify.URI.Type.PLAYLIST_V2:
         name = await fetchPlaylist(uri);
         break;
