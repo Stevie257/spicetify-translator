@@ -5,9 +5,9 @@ Adds a button to translate stuff in Spotify (tracks, albums, playlists, artists,
 
 Clicking the translate button opens Google Translate in your browser with the text you want to translate
 
-![demo](resources/Demo2.png)
-
 ![demo](resources/Demo1.png)
+
+![demo](resources/Demo2.png)
 
 ---
 
